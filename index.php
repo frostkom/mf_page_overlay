@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: MF Page Overlay
-Plugin URI:
-Description:
+Plugin URI: https://github.com/frostkom/mf_page_overlay
+Description: Wordpress plugin to add page overlay
 Version: 1.0.0
 Licence: GPLv2 or later
 Author: Martin Fors
@@ -11,7 +11,7 @@ Text Domain: lang_page_overlay
 Domain Path: /lang
 
 Depends: Meta Box, MF Base
-GitHub Plugin URI:
+GitHub Plugin URI: frostkom/mf_page_overlay
 */
 
 if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') && is_plugin_active("mf_base/index.php"))
