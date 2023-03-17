@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-17 10:19+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Martin Fors\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: nb_NO\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: esc_html__;esc_html_e;esc_attr__;esc_attr_e;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../include/classes.php:16
+msgid "Page Overlay"
+msgstr "Innehåll över sidan"
+
+#~ msgid "Draft"
+#~ msgstr "Utkast"
+
+#~ msgid "Scheduled"
+#~ msgstr "Planlagt"
+
+#~ msgid "Pending"
+#~ msgstr "Venter"
+
+#~ msgid "Published"
+#~ msgstr "Publisert"
+
+#~ msgid "Trash"
+#~ msgstr "Papirkurv"

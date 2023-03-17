@@ -1,0 +1,50 @@
+@media all
+{
+	/*html
+	{
+		overflow-y: hidden !important;
+	}*/
+
+		body.has_page_overlay > #wrapper, body.has_page_overlay .fl-page
+		{
+			-webkit-filter: blur(1em);
+			filter: blur(1em);
+		}
+
+		#overlay_page.modal
+		{
+			display: block;
+		}
+
+			#overlay_page > div
+			{
+				padding: 3em;
+				text-align: center;
+				min-width: 400px;
+			}
+
+				#overlay_page > div > *:last-child
+				{
+					margin-bottom: 0;
+				}
+
+				#overlay_page .button_close
+				{
+					cursor: pointer;
+				}
+
+				/*#overlay_page > div > *:not(:last-child)
+				{
+					margin-bottom: 2rem;
+				}
+
+					#overlay_page > div > *:not(:last-child) a.button
+					{
+						margin: 0;
+					}
+
+				#overlay_page .fa.fa-times
+				{
+					display: none;
+				}*/
+}
