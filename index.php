@@ -3,7 +3,7 @@
 Plugin Name: MF Page Overlay
 Plugin URI: https://github.com/frostkom/mf_page_overlay
 Description: Wordpress plugin to add page overlay
-Version: 1.0.0
+Version: 1.0.2
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://martinfors.se
@@ -19,6 +19,8 @@ if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') &
 	include_once("include/classes.php");
 
 	$obj_page_overlay = new mf_page_overlay();
+
+	add_action('cron_base', array($obj_page_overlay, 'cron_base'), mt_rand(1, 10));
 
 	if(is_admin())
 	{
