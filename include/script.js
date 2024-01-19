@@ -1,12 +1,9 @@
 jQuery(function($)
 {
-	$(document).on('click', "#overlay_page .button_close", function(e)
+	$(document).on('click', "#overlay_page .button_close, #overlay_page a[href='#']", function(e)
 	{
-		if(e.target == e.currentTarget)
-		{
-			$(this).parents("#overlay_page").fadeOut().parents("body").removeClass('has_page_overlay');
+		$(this).parents("#overlay_page").fadeOut().parents("body").removeClass('has_page_overlay');
 
-			return false;
-		}
+		return false;
 	});
 });

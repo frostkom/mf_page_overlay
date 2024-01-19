@@ -2,10 +2,9 @@
 
 class mf_page_overlay
 {
-	function __construct()
-	{
-		$this->meta_prefix = 'mf_page_overlay_';
-	}
+	var $meta_prefix = 'mf_page_overlay_';
+
+	function __construct(){}
 
 	function cron_base()
 	{
@@ -89,8 +88,27 @@ class mf_page_overlay
 
 				$this->body_class = "has_page_overlay";
 
+				//$post_content = apply_filters('the_content', mf_get_post_content($page_overlay));
+				ob_start();
+
+				query_posts(array(
+					'post_type' => 'page',
+					'p' => $page_overlay,
+				));
+
+				while(have_posts())
+				{
+					the_post();
+					the_content();
+				}
+
+				$post_content = ob_get_contents();
+				ob_end_clean();
+
+				wp_reset_query();
+
 				$this->footer_output = "<div id='overlay_page' class='overlay_container modal disable_close'>
-					<div>".apply_filters('the_content', mf_get_post_content($page_overlay))."</div>
+					<div>".$post_content."</div>
 				</div>";
 			}
 		}
