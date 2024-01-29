@@ -3,6 +3,8 @@
 class mf_page_overlay
 {
 	var $meta_prefix = 'mf_page_overlay_';
+	var $body_class;
+	var $footer_output;
 
 	function __construct(){}
 
