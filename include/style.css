@@ -13,7 +13,7 @@
 
 	#overlay_page.modal
 	{
-		display: block;
+		display: none;
 	}
 
 		#overlay_page > div
