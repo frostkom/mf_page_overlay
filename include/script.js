@@ -46,6 +46,11 @@ jQuery(function($)
 		}
 	}
 
+	else
+	{
+		dom_overlay_page.fadeIn();
+	}
+
 	dom_overlay_page.on('click', ".button_close, a[href='#']", function()
 	{
 		dom_overlay_page.fadeOut().parents("body").removeClass('has_page_overlay');
