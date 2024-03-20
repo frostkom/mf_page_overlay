@@ -1,11 +1,13 @@
 @media all
 {
-	/*html
+	body > #wrapper, body .fl-page, body .header, body .main, body .bottom-page-wrap
 	{
-		overflow-y: hidden !important;
-	}*/
+		-webkit-filter: blur(0);
+		filter: blur(0);
+		transition: all 1s;
+	}
 
-	body.has_page_overlay > #wrapper, body.has_page_overlay .fl-page
+	body.has_page_overlay > #wrapper, body.has_page_overlay .fl-page, body.has_page_overlay .header, body.has_page_overlay .main, body.has_page_overlay .bottom-page-wrap
 	{
 		-webkit-filter: blur(1em);
 		filter: blur(1em);
@@ -32,21 +34,6 @@
 			{
 				cursor: pointer;
 			}
-
-			/*#overlay_page > div > *:not(:last-child)
-			{
-				margin-bottom: 2rem;
-			}
-
-				#overlay_page > div > *:not(:last-child) a.button
-				{
-					margin: 0;
-				}
-
-			#overlay_page .fa.fa-times
-			{
-				display: none;
-			}*/
 
 	#overlay_page_accepted
 	{
