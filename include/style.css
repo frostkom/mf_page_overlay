@@ -2,8 +2,8 @@
 {
 	body > #wrapper, body .fl-page, body .header, body .main, body .bottom-page-wrap
 	{
-		-webkit-filter: blur(0);
-		filter: blur(0);
+		-webkit-filter: none;
+		filter: none;
 		transition: all 1s;
 	}
 
