@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-28 14:29+0100\n"
+"POT-Creation-Date: 2024-05-06 14:42+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Martin Fors\n"
 "Language-Team: \n"
@@ -15,23 +15,28 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../include/classes.php:81
+#: ../include/classes.php:86
+#, php-format
+msgid "Overlay on %s"
+msgstr "Popup på %s"
+
+#: ../include/classes.php:102
 msgid "Hide when accepted"
 msgstr "Dölj efter acceptans"
 
-#: ../include/classes.php:94
+#: ../include/classes.php:115
 msgid "Page"
 msgstr "Sida"
 
-#: ../include/classes.php:94
+#: ../include/classes.php:115
 msgid "Popup"
 msgstr ""
 
-#: ../include/classes.php:103
+#: ../include/classes.php:124
 msgid "Page Overlay"
 msgstr "Innehåll över sidan"
 
-#: ../include/classes.php:161
+#: ../include/classes.php:182
 msgid "You have accepted. Do you wish to remove this acceptance?"
 msgstr "Du har accepterat. Vill du återkalla din acceptans?"
 

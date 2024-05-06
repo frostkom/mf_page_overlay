@@ -3,7 +3,7 @@
 Plugin Name: MF Page Overlay
 Plugin URI: https://github.com/frostkom/mf_page_overlay
 Description: Wordpress plugin to add page overlay
-Version: 1.0.22
+Version: 1.1.0
 Licence: GPLv2 or later
 Author: Martin Fors
 Author URI: https://martinfors.se
@@ -25,6 +25,8 @@ if(!function_exists('is_plugin_active') || function_exists('is_plugin_active') &
 	if(is_admin())
 	{
 		register_activation_hook(__FILE__, 'activate_page_overlay');
+
+		add_filter('display_post_states', array($obj_page_overlay, 'display_post_states'), 10, 2);
 
 		add_action('rwmb_meta_boxes', array($obj_page_overlay, 'rwmb_meta_boxes'));
 	}

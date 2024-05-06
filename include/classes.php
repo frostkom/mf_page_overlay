@@ -68,6 +68,27 @@ class mf_page_overlay
 		return $out;
 	}
 
+	function display_post_states($post_states, $post)
+	{
+		global $wpdb;
+
+		$result = $wpdb->get_results($wpdb->prepare("SELECT post_title FROM ".$wpdb->posts." INNER JOIN ".$wpdb->postmeta." ON ".$wpdb->posts.".ID = ".$wpdb->postmeta.".post_id WHERE meta_key = %s AND meta_value = '%d'", $this->meta_prefix.'page_id', $post->ID));
+
+		if($wpdb->num_rows > 0)
+		{
+			$post_titles = "";
+
+			foreach($result as $r)
+			{
+				$post_titles .= ($post_titles != '' ? ", " : "").$r->post_title;
+			}
+
+			$post_states[$this->meta_prefix.'page_id'] = sprintf(__("Overlay on %s", 'lang_page_overlay'), $post_titles);
+		}
+
+		return $post_states;
+	}
+
 	function rwmb_meta_boxes($meta_boxes)
 	{
 		if(IS_EDITOR)
