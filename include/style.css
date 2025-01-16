@@ -2,14 +2,12 @@
 {
 	body > #wrapper, body .fl-page, body .header, body .main, body .bottom-page-wrap
 	{
-		-webkit-filter: none;
 		filter: none;
 		transition: all 1s;
 	}
 
 	body.has_page_overlay > #wrapper, body.has_page_overlay .fl-page, body.has_page_overlay .header, body.has_page_overlay .main, body.has_page_overlay .bottom-page-wrap
 	{
-		-webkit-filter: blur(1em);
 		filter: blur(1em);
 	}
 
