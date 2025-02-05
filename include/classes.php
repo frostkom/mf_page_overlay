@@ -167,10 +167,9 @@ class mf_page_overlay
 					$this->body_class = "has_page_overlay";
 
 					$plugin_include_url = plugin_dir_url(__FILE__);
-					$plugin_version = get_plugin_version(__FILE__);
 
-					mf_enqueue_style('style_page_overlay', $plugin_include_url."style.css", $plugin_version);
-					mf_enqueue_script('script_page_overlay', $plugin_include_url."script.js", $plugin_version);
+					mf_enqueue_style('style_page_overlay', $plugin_include_url."style.css");
+					mf_enqueue_script('script_page_overlay', $plugin_include_url."script.js");
 
 					$this->footer_output = "<div id='overlay_page' data-overlay_page_id='".$overlay_page_id."' data-overlay_hide_when_accepted='".$overlay_hide_when_accepted."' class='overlay_container modal disable_close'>
 						<div>".$post_content."</div>
