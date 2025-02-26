@@ -19,13 +19,13 @@ class mf_page_overlay
 		{
 			/* Set No Index on overlay pages */
 			#########################
-			if(is_plugin_active("mf_theme_core/index.php"))
+			if(is_plugin_active("mf_base/index.php"))
 			{
-				global $obj_theme_core;
+				global $obj_base;
 
-				if(!isset($obj_theme_core))
+				if(!isset($obj_base))
 				{
-					$obj_theme_core = new mf_theme_core();
+					$obj_base = new mf_base();
 				}
 
 				$result = $wpdb->get_results($wpdb->prepare("SELECT meta_value FROM ".$wpdb->posts." LEFT JOIN ".$wpdb->postmeta." ON ".$wpdb->posts.".ID = ".$wpdb->postmeta.".post_id WHERE post_type = %s AND meta_key = %s AND meta_value > 0 GROUP BY meta_value", 'page', $this->meta_prefix.'page_id'));
@@ -34,12 +34,11 @@ class mf_page_overlay
 				{
 					$post_id = $r->meta_value;
 
-					$page_index = get_post_meta($post_id, $obj_theme_core->meta_prefix.'page_index', true);
+					$page_index = get_post_meta($post_id, $obj_base->meta_prefix.'page_index', true);
 
 					if($page_index != 'noindex')
 					{
-						//do_log("Set No Index on ".$post_id);
-						$obj_theme_core->set_noindex_on_page($post_id);
+						$obj_base->set_noindex_on_page($post_id);
 					}
 				}
 			}
